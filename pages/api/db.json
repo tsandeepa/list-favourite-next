@@ -46,30 +46,5 @@
       "id": 7,
       "name": "Adjudicator Rick",
       "image":"https://rickandmortyapi.com/api/character/avatar/8.jpeg"
-    },
-    { 
-      "favourite": false,
-      "id": 8,
-      "name": "Agency Director",
-      "image":"https://rickandmortyapi.com/api/character/avatar/9.jpeg"
-    },
-    { 
-      "favourite": false,
-      "id": 9,
-      "name": "Alan Rails",
-      "image":"https://rickandmortyapi.com/api/character/avatar/10.jpeg"
-    },
-    { 
-      "favourite": false,
-      "id": 10,
-      "name": "Albert Einstein",
-      "image":"https://rickandmortyapi.com/api/character/avatar/11.jpeg"
-    },
-    { 
-      "favourite": false,
-      "id": 11,
-      "name": "Alexander",
-      "image":"https://rickandmortyapi.com/api/character/avatar/12.jpeg"
     }
-  
   ]

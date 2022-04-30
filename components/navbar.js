@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Topbar } from "../styles/styled/navbar.styled";
 
-const Navbar = () => {
+const Navbar = ({handleTheme}) => {
     return ( 
         <Topbar>
             <h2>Noon Favourites</h2>
@@ -10,13 +10,11 @@ const Navbar = () => {
                     <Link href="/"><a>Home</a></Link>
                 </li>
                 <li>
-                    <Link href="/favourites"><a>Favourite</a></Link>
+                    <Link href="/favourites"><a>Favourites</a></Link>
                 </li>
-                
                 <li>
-                    <Link href="/items"><a>Items</a></Link>
+                    <button onClick={()=>handleTheme()}>Theme</button>
                 </li>
-
             </ul>
         </Topbar>
      );
