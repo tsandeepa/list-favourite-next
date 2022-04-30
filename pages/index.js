@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { Container } from '../styles/styled/layout.styled';
 import { ItemGrid } from '../styles/styled/itemGrid.styled';
 import { motion } from 'framer-motion';
-
+import { BiHeart } from "react-icons/bi";
 
 // export const getStaticProps = async () =>{
 //   // const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -111,7 +111,7 @@ export default function Home() {
                         <h3>{item.name}</h3>
                         {
                           item.favourite ? <button onClick={()=>notFavourite(item.id)}>Not Favourite</button> :
-                          <button onClick={()=>makeFavourite(item.id)}>Favourite</button>
+                          <button onClick={()=>makeFavourite(item.id)}>{BiHeart} Favourite</button>
                         }
                       </div>
                       

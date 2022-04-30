@@ -11,6 +11,7 @@ export const ItemGrid = styled.div`
         }
         h3{
             text-align: center;
+            margin-top: 12px;
         }
     }
 
