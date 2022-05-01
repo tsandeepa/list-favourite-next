@@ -118,11 +118,25 @@ export default function Home() {
                           item.favourite ? <motion.button
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
-                          className='btn-fav-not' onClick={()=>notFavourite(item.id)}><FaRegHeart /></motion.button> :
+                          className='btn-fav-not' onClick={()=>notFavourite(item.id)}> 
+                            <Image
+                              src="/images/h-dark.png"
+                              width={20}
+                              height={20}
+                            />
+
+                          </motion.button> :
                           <motion.button
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
-                          className='btn-fav' onClick={()=>makeFavourite(item.id)}> <FaRegHeart /></motion.button>
+                          className='btn-fav' onClick={()=>makeFavourite(item.id)}>
+                              <Image
+                              src="/images/h-light.png"
+                              width={20}
+                              height={20}
+                            />
+
+                          </motion.button>
                         }
                       </div>
                   </motion.div>
