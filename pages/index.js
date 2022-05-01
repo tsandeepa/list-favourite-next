@@ -9,6 +9,10 @@ import { Container } from '../styles/styled/layout.styled';
 import { ItemGrid } from '../styles/styled/itemGrid.styled';
 import { motion } from 'framer-motion';
 import { FaRegHeart } from "react-icons/fa";
+import { BiHeartCircle } from "react-icons/bi";
+import { BiHeart } from "react-icons/bi";
+import { VscHeart } from "react-icons/vsc";
+
 
 // export const getStaticProps = async () =>{
 //   // const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -122,23 +126,15 @@ export default function Home() {
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
                           className='btn-fav-not' onClick={()=>notFavourite(item.id)}> 
-                            <img
-                              src="https://firebasestorage.googleapis.com/v0/b/my-favourites-965fb.appspot.com/o/h-dark.png?alt=media&token=1c45ac33-61bb-4fae-b8e9-c6673e192e8e"
-                              width={20}
-                              height={20}
-                            />
+                          <BiHeart/>
+                            
 
                           </motion.button> :
                           <motion.button
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
                           className='btn-fav' onClick={()=>makeFavourite(item.id)}>
-                              <img
-                              src="https://firebasestorage.googleapis.com/v0/b/my-favourites-965fb.appspot.com/o/h-light.png?alt=media&token=aa6e5314-58d2-4385-bf1b-33286b7aa7aa"
-                              width={20}
-                              height={20}
-                            />
-
+                          <BiHeart/>
                           </motion.button>
                         }
                       </div>

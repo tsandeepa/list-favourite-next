@@ -23,7 +23,8 @@ export const ItemGrid = styled.div`
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            font-size: 19px;
+            font-size: 24px;
+            padding: 0;
         }
         .btn-fav{
             background:  ${({theme})=>theme.btnFavBg};
