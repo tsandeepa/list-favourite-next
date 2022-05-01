@@ -17,7 +17,7 @@ export const ItemGrid = styled.div`
         button{
             border: none;
             border-radius: 50px;
-            width: 30px;
+            width: 34px;
             aspect-ratio: 1/1;
             cursor: pointer;
             display: inline-flex;
@@ -25,6 +25,10 @@ export const ItemGrid = styled.div`
             justify-content: center;
             font-size: 24px;
             padding: 0;
+            svg{
+                position: relative;
+                top: 1px;
+            }
         }
         .btn-fav{
             background:  ${({theme})=>theme.btnFavBg};
