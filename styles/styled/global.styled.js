@@ -3,6 +3,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         background-color:${({theme})=> theme.bg};
         color: ${({theme})=>theme.textColor};
+        margin-bottom: 40px;
     }
     .loader{
         position: fixed;
@@ -15,16 +16,28 @@ const GlobalStyles = createGlobalStyle`
         align-items: center;
         justify-content: center;
     }
-        body::-webkit-scrollbar {
-        width: 6px;               /* width of the entire scrollbar */
+    body::-webkit-scrollbar {
+    width: 6px;               /* width of the entire scrollbar */
+    }
+    body::-webkit-scrollbar-track {
+    background: transparent;        /* color of the tracking area */
+    }
+    body::-webkit-scrollbar-thumb {
+    background-color: ${({theme})=> theme.scrollColor};   /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    }
+    .banner-text{
+        text-align: center;
+        margin-bottom: 80px;
+        h1{
+            font-size: 70px;
+            line-height: 1;
         }
-        body::-webkit-scrollbar-track {
-        background: transparent;        /* color of the tracking area */
+        p{
+            font-size: 19px;
+            margin-top: 20px;
         }
-        body::-webkit-scrollbar-thumb {
-        background-color: ${({theme})=> theme.scrollColor};   /* color of the scroll thumb */
-        border-radius: 20px;       /* roundness of the scroll thumb */
-        }
+    }
 `
 
 export default GlobalStyles

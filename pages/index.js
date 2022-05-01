@@ -83,16 +83,15 @@ export default function Home() {
 
   return (
     <>  
-        
-          <h1>Home Page</h1>
-
-
+      <div className='banner-text'>
+        <h1>Choose Your <br></br> Character</h1>
+        <p>Add characters to your favourites list</p>
+      </div> 
         {isLoading && <div className='loader'>Loading</div>}
         <ItemGrid className='items'>
           {     items &&
                 items.map((item,i)=>(
                   <motion.div 
-                  
                     custom={i}
                     initial="hidden"
                     animate="visible"
@@ -101,20 +100,20 @@ export default function Home() {
                       <div className="character">
                         <motion.img 
                           initial={{
-                            borderRadius:60
+                            borderRadius: '100%'
                           }}
                           whileHover={{
-                            borderRadius:10,
-                            scale: 0.9
+                            borderRadius: ["100%", "10%"],
+                            scale: 0.9,
+                            rotate: [0, 0, 5, -5, 0, 0],
                           }}
                         src={item.image} />
                         <h3>{item.name}</h3>
                         {
-                          item.favourite ? <button onClick={()=>notFavourite(item.id)}>Not Favourite</button> :
-                          <button onClick={()=>makeFavourite(item.id)}>{BiHeart} Favourite</button>
+                          item.favourite ? <button className='btn-fav-not' onClick={()=>notFavourite(item.id)}>Not Favourite</button> :
+                          <button className='btn-fav' onClick={()=>makeFavourite(item.id)}> <BiHeart />Favourite</button>
                         }
                       </div>
-                      
                   </motion.div>
                 ))
             }

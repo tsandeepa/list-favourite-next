@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Favouites } from '../styles/styled/favourite.styled';
+import { motion } from 'framer-motion';
+import { BiTrashAlt } from "react-icons/bi";
 
 
 const Favourites = () => {
@@ -31,24 +34,53 @@ const Favourites = () => {
           setisFavourite(!isFavourite)
         })
       }
-
+      const listLoad = {
+        hidden: { opacity: 0, scale:0.8},
+        visible: i =>(
+            { 
+                opacity: 1,
+                scale:1,
+                transition:{
+                    type: "easeIn",
+                    delay: i * 0.08,
+                } 
+            }
+        )
+      }
 
     return ( 
-        <div>
-            <h2>Fav</h2>
-            {
-              isLoading && <div>Loading</div>
-            }
-            {   favouriteItems &&
-                favouriteItems.map((item)=>(
-                    <div>
-                        
-                        <p>{item.name}</p>
-                        <button onClick={()=>notFavourite(item.id)}>Remove Favourite</button>
-                    </div>
-                ))
-            }
-        </div>
+        <Favouites>
+            <h2>Your Favourite Characters</h2>
+            {isLoading && <div className='loader'>Loading</div>}
+            <div className='fav-list'>
+              {   favouriteItems &&
+                  favouriteItems.map((item,i)=>(
+                      <motion.div 
+                      custom={i}
+                      initial="hidden"
+                      animate="visible"
+                      variants={listLoad}
+                      className='fav-item'>
+                        <motion.div
+                          whileHover={{scale:1.04}}
+                          className="fi-bg"
+                        >
+                          <div>
+                              <img src={item.image} alt="" />
+                              <h3>{item.name}</h3>
+                          </div>
+                          <motion.button 
+                            whileHover={{color:'#fff'}}
+                          onClick={()=>notFavourite(item.id)}> <BiTrashAlt/> Remove </motion.button>
+                        </motion.div>
+                          
+                      </motion.div>
+                  ))
+              }
+            </div>
+            
+            
+        </Favouites>
      );
 }
  

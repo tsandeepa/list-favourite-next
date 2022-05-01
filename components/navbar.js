@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Topbar } from "../styles/styled/navbar.styled";
+import { BiAdjust } from "react-icons/bi";
 
 const Navbar = ({handleTheme}) => {
     return ( 
@@ -13,7 +14,7 @@ const Navbar = ({handleTheme}) => {
                     <Link href="/favourites"><a>Favourites</a></Link>
                 </li>
                 <li>
-                    <button onClick={()=>handleTheme()}>Theme</button>
+                    <button  onClick={()=>handleTheme()}><BiAdjust/></button>
                 </li>
             </ul>
         </Topbar>
