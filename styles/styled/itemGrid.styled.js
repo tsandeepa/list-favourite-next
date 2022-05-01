@@ -33,4 +33,9 @@ export const ItemGrid = styled.div`
         }
     }
 
+    @media only screen and (max-width: 600px) { 
+        grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+        padding: 10px;
+    }
+
 `

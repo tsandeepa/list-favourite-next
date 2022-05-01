@@ -38,6 +38,20 @@ const GlobalStyles = createGlobalStyle`
             margin-top: 20px;
         }
     }
+
+    @media only screen and (max-width: 600px) { 
+        .banner-text{
+            padding: 10px;
+            margin-bottom: 40px;
+            h1{
+                font-size: 50px;
+            }
+        }
+        body{
+            padding-bottom: 100px;
+        }
+    }
+
 `
 
 export default GlobalStyles

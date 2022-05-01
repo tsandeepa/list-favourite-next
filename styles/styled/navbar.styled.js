@@ -17,7 +17,11 @@ export const Topbar = styled.div`
             bottom: -20px;
         }
         h2{
-            margin-left: 150px;
+            font-weight: 800;
+            margin-left: 130px;
+            font-size: 22px;
+            color: #25232c;
+            text-transform: uppercase;
         }
     }
     ul{
@@ -37,8 +41,18 @@ export const Topbar = styled.div`
                 font-size: 30px;
                 cursor: pointer;
                 display: flex;
-                color: #837a00;
+                color: #494949;
             }
+        }
+    }
+
+    @media only screen and (max-width: 600px) { 
+        position: fixed;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        h2 {
+            display:none;
         }
     }
 `

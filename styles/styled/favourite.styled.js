@@ -9,7 +9,8 @@ export const Favouites = styled.div`
             font-size: 40px;
         }
         p{
-            font-size: 20px;
+            font-size: 18px;
+            color: #b1b1b1;
         }
     }
     
@@ -60,5 +61,9 @@ export const Favouites = styled.div`
             }
         }
     }
-
+    @media only screen and (max-width: 600px) { 
+        .fav-list{
+            padding: 10px;
+        }
+    }
 `
