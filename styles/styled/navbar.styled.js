@@ -9,6 +9,17 @@ export const Topbar = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    .h-logo{
+        position: relative;
+        img{
+            height: 100px;
+            position: absolute;
+            bottom: -20px;
+        }
+        h2{
+            margin-left: 150px;
+        }
+    }
     ul{
         list-style: none;
         display: flex;
@@ -26,6 +37,7 @@ export const Topbar = styled.div`
                 font-size: 30px;
                 cursor: pointer;
                 display: flex;
+                color: #837a00;
             }
         }
     }

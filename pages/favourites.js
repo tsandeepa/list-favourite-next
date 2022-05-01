@@ -50,7 +50,10 @@ const Favourites = () => {
 
     return ( 
         <Favouites>
-            <h2>Your Favourite Characters</h2>
+            <div className='sub-banner'>
+              <h2>Your Favourite Characters</h2>
+              <p>Keep them or romove them from your list.</p>
+            </div>
             {isLoading && <div className='loader'>Loading</div>}
             <div className='fav-list'>
               {   favouriteItems &&

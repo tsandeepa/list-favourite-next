@@ -12,6 +12,24 @@ export const ItemGrid = styled.div`
         h3{
             text-align: center;
             margin-top: 12px;
+            margin-bottom: 10px;
+        }
+        button{
+            border: none;
+            border-radius: 50px;
+            width: 30px;
+            aspect-ratio: 1/1;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 19px;
+        }
+        .btn-fav{
+            background: #ffffff2b;
+        }
+        .btn-fav-not{
+            background: #fff338;
         }
     }
 

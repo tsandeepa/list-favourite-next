@@ -1,9 +1,18 @@
 import styled from "styled-components";
 
 export const Favouites = styled.div`
-    h2{
+    .sub-banner{
         text-align: center;
+        margin-bottom: 40px;
+
+        h2{
+            font-size: 40px;
+        }
+        p{
+            font-size: 20px;
+        }
     }
+    
     .fav-list{
         display: flex;
         flex-direction: column;
@@ -11,7 +20,6 @@ export const Favouites = styled.div`
         max-width: 700px;
         margin: 0 auto;
         .fav-item{
-            
             .fi-bg{
                 display: flex;
                 justify-content: space-between;

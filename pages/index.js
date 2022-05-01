@@ -85,7 +85,7 @@ export default function Home() {
     <>  
       <div className='banner-text'>
         <h1>Choose Your <br></br> Character</h1>
-        <p>Add characters to your favourites list</p>
+        <p>Add characters to your favourites list.</p>
       </div> 
         {isLoading && <div className='loader'>Loading</div>}
         <ItemGrid className='items'>
@@ -110,8 +110,14 @@ export default function Home() {
                         src={item.image} />
                         <h3>{item.name}</h3>
                         {
-                          item.favourite ? <button className='btn-fav-not' onClick={()=>notFavourite(item.id)}>Not Favourite</button> :
-                          <button className='btn-fav' onClick={()=>makeFavourite(item.id)}> <BiHeart />Favourite</button>
+                          item.favourite ? <motion.button
+                            whileTap={{ scale: 0.8 }}
+                            whileHover={{scale:1.1}}
+                          className='btn-fav-not' onClick={()=>notFavourite(item.id)}><BiHeart /></motion.button> :
+                          <motion.button
+                            whileTap={{ scale: 0.8 }}
+                            whileHover={{scale:1.1}}
+                          className='btn-fav' onClick={()=>makeFavourite(item.id)}> <BiHeart /></motion.button>
                         }
                       </div>
                   </motion.div>
