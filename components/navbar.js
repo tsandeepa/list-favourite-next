@@ -20,7 +20,7 @@ const Navbar = ({handleTheme}) => {
                         repeat: Infinity,
                         repeatDelay: 1
                       }}
-                src="/images/logo-2.png" alt="" />
+                src="https://firebasestorage.googleapis.com/v0/b/my-favourites-965fb.appspot.com/o/logo-2.png?alt=media&token=64669837-8959-4768-b940-bc716c5f39df" alt="" />
                 <h2>Characters</h2>
             </div>
 
