@@ -8,7 +8,7 @@ import Link from 'next/link'
 import { Container } from '../styles/styled/layout.styled';
 import { ItemGrid } from '../styles/styled/itemGrid.styled';
 import { motion } from 'framer-motion';
-import { FaRegHeart } from "react-icons/fa";
+import { BsHeart } from "react-icons/bs";
 
 // export const getStaticProps = async () =>{
 //   // const res = await fetch('https://jsonplaceholder.typicode.com/users');
@@ -118,11 +118,11 @@ export default function Home() {
                           item.favourite ? <motion.button
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
-                          className='btn-fav-not' onClick={()=>notFavourite(item.id)}><FaRegHeart /></motion.button> :
+                          className='btn-fav-not' onClick={()=>notFavourite(item.id)}><BsHeart /></motion.button> :
                           <motion.button
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
-                          className='btn-fav' onClick={()=>makeFavourite(item.id)}> <FaRegHeart /></motion.button>
+                          className='btn-fav' onClick={()=>makeFavourite(item.id)}> <BsHeart /></motion.button>
                         }
                       </div>
                   </motion.div>
