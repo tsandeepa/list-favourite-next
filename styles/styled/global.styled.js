@@ -15,6 +15,23 @@ const GlobalStyles = createGlobalStyle`
         display: flex;
         align-items: center;
         justify-content: center;
+        .l-anim{
+            background: #0000008c;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            /* img{
+                width: 80px;
+            } */
+            span{
+                font-size: 15px;
+            }
+        }
+
     }
     body::-webkit-scrollbar {
     width: 6px;               /* width of the entire scrollbar */
@@ -36,6 +53,7 @@ const GlobalStyles = createGlobalStyle`
         p{
             font-size: 19px;
             margin-top: 20px;
+            color: #b1b1b1;
         }
     }
 

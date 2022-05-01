@@ -26,10 +26,12 @@ export const ItemGrid = styled.div`
             font-size: 19px;
         }
         .btn-fav{
-            background: #ffffff2b;
+            background:  ${({theme})=>theme.btnFavBg};
+            color:  ${({theme})=>theme.btnFavText};
         }
         .btn-fav-not{
-            background: #fff338;
+            background:  ${({theme})=>theme.btnFavNotBg};
+            color:  ${({theme})=>theme.btnFavNotText};
         }
     }
 

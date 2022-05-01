@@ -11,7 +11,7 @@ const Navbar = ({handleTheme}) => {
                 <motion.img 
                     animate={{
                         scale: [1, 1.1, 1.1, 1, 1],
-                        rotate: [0, 0, 50, -50, 0],
+                        rotate: [0, 0, 20, -20, 0],
                       }}
                       transition={{
                         duration: 2,

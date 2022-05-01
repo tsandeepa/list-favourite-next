@@ -52,7 +52,7 @@ export const Favouites = styled.div`
                     align-items: center;
                     gap: 8px;
                     padding: 0 20px;
-                    background: #393939;
+                    background: ${({theme})=>theme.btnFavRemove};
                     color: #ffd1a2;
                     svg{
                         font-size: 20px;

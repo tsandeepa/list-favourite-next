@@ -36,10 +36,10 @@ export default function Home() {
   }, [isFavourite])
 
 
-  console.log(items);
+  // console.log(items);
   const makeFavourite = async (id) =>{
     setIsLoading(true)
-    console.log(id);
+    // console.log(id);
     const res = await fetch('https://my-favourites-965fb-default-rtdb.firebaseio.com/items/'+id+'.json',{
       method:'PATCH',
       body:JSON.stringify({
@@ -52,7 +52,7 @@ export default function Home() {
   }
   const notFavourite = async (id) =>{
     setIsLoading(true)
-    console.log(id);
+    // console.log(id);
     const res = await fetch('https://my-favourites-965fb-default-rtdb.firebaseio.com/items/'+id+'.json',{
       method:'PATCH',
       body:JSON.stringify({
@@ -87,7 +87,12 @@ export default function Home() {
         <h1>Choose Your <br></br> Character</h1>
         <p>Add characters to your favourites list.</p>
       </div> 
-        {isLoading && <div className='loader'>Loading</div>}
+        {/* {isLoading && <div className='loader'>Loading</div>} */}
+        {isLoading && <div className='loader'>
+          <div className='l-anim'>
+              <span> Loading... </span>
+          </div>
+        </div>}
         <ItemGrid className='items'>
           {     items &&
                 items.map((item,i)=>(

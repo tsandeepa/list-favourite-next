@@ -23,7 +23,7 @@ const Favourites = () => {
 
       const notFavourite = async (id) =>{
         setIsLoading(true)
-        console.log(id);
+        // console.log(id);
         const res = await fetch('https://my-favourites-965fb-default-rtdb.firebaseio.com/items/'+id+'.json',{
           method:'PATCH',
           body:JSON.stringify({
@@ -54,7 +54,11 @@ const Favourites = () => {
               <h2>Your Favourite Characters</h2>
               <p>Keep them or romove them from your list.</p>
             </div>
-            {isLoading && <div className='loader'>Loading</div>}
+            {isLoading && <div className='loader'>
+              <div className='l-anim'>
+                  <span> Loading... </span>
+              </div>
+            </div>}
             <div className='fav-list'>
               {   favouriteItems &&
                   favouriteItems.map((item,i)=>(
@@ -63,7 +67,9 @@ const Favourites = () => {
                       initial="hidden"
                       animate="visible"
                       variants={listLoad}
-                      className='fav-item'>
+                      className='fav-item'
+                      key={item.id}
+                      >
                         <motion.div
                           whileHover={{scale:1.04}}
                           className="fi-bg"

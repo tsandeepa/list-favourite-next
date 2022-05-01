@@ -51,6 +51,8 @@ export const Topbar = styled.div`
         bottom: 0;
         left: 10px;
         right: 10px;
+        z-index: 1;
+        margin-bottom: 10px;
         h2 {
             display:none;
         }
