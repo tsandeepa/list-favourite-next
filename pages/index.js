@@ -119,8 +119,8 @@ export default function Home() {
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
                           className='btn-fav-not' onClick={()=>notFavourite(item.id)}> 
-                            <Image
-                              src="/images/h-dark.png"
+                            <img
+                              src="https://firebasestorage.googleapis.com/v0/b/my-favourites-965fb.appspot.com/o/h-dark.png?alt=media&token=1c45ac33-61bb-4fae-b8e9-c6673e192e8e"
                               width={20}
                               height={20}
                             />
@@ -130,8 +130,8 @@ export default function Home() {
                             whileTap={{ scale: 0.8 }}
                             whileHover={{scale:1.1}}
                           className='btn-fav' onClick={()=>makeFavourite(item.id)}>
-                              <Image
-                              src="/images/h-light.png"
+                              <img
+                              src="https://firebasestorage.googleapis.com/v0/b/my-favourites-965fb.appspot.com/o/h-light.png?alt=media&token=aa6e5314-58d2-4385-bf1b-33286b7aa7aa"
                               width={20}
                               height={20}
                             />
