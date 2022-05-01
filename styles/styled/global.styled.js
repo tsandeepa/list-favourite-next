@@ -29,6 +29,7 @@ const GlobalStyles = createGlobalStyle`
             } */
             span{
                 font-size: 15px;
+                color: #fff;
             }
         }
 
